@@ -1,15 +1,10 @@
 import { fireEvent, render, screen } from "@testing-library/react"
-import { ZustandCounter } from "./ZustandCounter"
-import { useStore } from "./zustandStore"
+import { Provider } from "react-redux"
+import { ReduxCounter } from "../Components/ReduxCounter"
+import { createStore } from "../Stores/store"
 
-const originalState = useStore.getState()
-
-beforeEach(() => {
-  useStore.setState(originalState)
-})
-
-test("add one", () => {
-  render(<ZustandCounter />)
+test("increment", () => {
+  render(<Provider store={createStore()}><ReduxCounter /></Provider>)
   const counter = screen.getByRole("contentinfo")
   expect(counter).toHaveTextContent("0")
   const addButton = screen.getByText(/Increment/i)
@@ -17,8 +12,8 @@ test("add one", () => {
   expect(counter).toHaveTextContent("1")
 })
 
-test("add one again", () => {
-  render(<ZustandCounter />)
+test("increment again", () => {
+  render(<Provider store={createStore()}><ReduxCounter /></Provider>)
   const counter = screen.getByRole("contentinfo")
   expect(counter).toHaveTextContent("0")
   const addButton = screen.getByText(/Increment/i)

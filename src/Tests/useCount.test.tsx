@@ -1,6 +1,6 @@
 import { renderHook } from "@testing-library/react"
 import { act } from "react-dom/test-utils"
-import useCount from "./useCount"
+import useCount from "../Hooks/useCount"
 
 test("<useCount>", () => {
   const { result } = renderHook(() => useCount())

@@ -1,7 +1,7 @@
 import { waitFor, render, screen } from '@testing-library/react'
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
-import {APIComponent} from './APIComponent'
+import {APIComponent} from '../Components/APIComponent'
 
 const server = setupServer(
   rest.get("/api", (req, res, ctx) => {

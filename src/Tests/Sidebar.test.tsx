@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Sidebar from './Sidebar'
+import Sidebar from '../Components/Sidebar'
 
 test('<Sidebar>', () => {
   const items = [

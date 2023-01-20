@@ -1,4 +1,4 @@
-import { useStore } from "./zustandStore"
+import { useStore } from "../Stores/zustandStore"
 
 export function ZustandCounter() {
   const { count, increment } = useStore()

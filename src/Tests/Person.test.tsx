@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import Person from './Person'
+import Person from '../Components/Person'
 
 test('<Person>', () => {
   render(<Person name="Josh" />)

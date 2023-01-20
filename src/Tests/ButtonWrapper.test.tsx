@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import {ButtonWrapper} from './ButtonWrapper'
+import {ButtonWrapper} from '../Components/ButtonWrapper'
 
 test('<ButtonWrapper>', () => {
   const onClick = jest.fn()
